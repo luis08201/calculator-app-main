@@ -75,6 +75,7 @@ radio.forEach((radioBtn) => {
       body.style.backgroundColor = "#17062a";
       screen.style.backgroundColor = "#1e0836";
       screen.style.color = "#f6da44";
+      screen.style.opacity = "1";
       banner.style.backgroundColor = "#1e0934";
       panel.style.backgroundColor = "#1e0934";
       button.forEach((btn) => {
