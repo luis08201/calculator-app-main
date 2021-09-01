@@ -171,9 +171,7 @@ input {
   padding: 0 32px;
   text-align: right;
 }
-#calculadora__display::placeholder{
-  opacity:1;
-}
+
 .panels {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
