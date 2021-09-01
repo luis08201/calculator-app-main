@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="css/estilos.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon-32x32.png"
-    />
-    <title>Frontend Mentor | Calculator app</title>
-  </head>
-  <body>
-    <main class="calculadora">
-      <div class="calculadora__header">
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+  <main class="calculadora">
+    <div class="calculadora__header">
+      <h1 class="calculadora__header--heading">calc</h1>
+      <div class="calculadora__header__mainswitch">
+          <p class="calculadora__mainswitch--paragraph">theme</p>
+          <div class="calculadora__switch">
+            <div class="calculadora__switch--level">
+              <p class="calculadora__switch--level--paragraph">1</p>
+              <p class="calculadora__switch--level--paragraph">2</p>
+              <p class="calculadora__switch--level--paragraph">3</p>
+            </div>
+            <form class="calculadora__switch--buttons">
+              <label for="first" class="toggleRadio">
+                <input type="radio" name="toggle-state" id="first" value="first" checked />
+                <span class="check check-1"></span>
+              </label>
+              <label for="second" class="toggleRadio">
+                <input type="radio" name="toggle-state" id="second" value="second">
+                <span class="check check-2"></span>
+              </label>
+              <label for="third" class="toggleRadio"> 
+                <input type="radio" name="toggle-state" id="third" value="third">
+                <span class="check check-3"></span>
+              </label>
+            </form>
+          </div>
       </div>
-      <div class="calculadora__screen"></div>
-      <div class="calculadora__panel panels">
-        <button class="panel__button--1">1</button>
-        <button class="panel__button--2">2</button>
-        <button class="panel__button--3">3</button>
-        <button class="panel__button--4">4</button>
-        <button class="panel__button--5">5</button>
-        <button class="panel__button--6">6</button>
-        <button class="panel__button--7">7</button>
-        <button class="panel__button--8">8</button>
-        <button class="panel__button--9">9</button>
-        <button class="panel__button--0">0</button>
-        <button class="panel__button--reset">reset</button>
-        <button class="panel__button--del">del</button>
-        <button class="panel__button--plus">+</button>
-        <button class="panel__button--rest">-</button>
-        <button class="panel__button--multiply">x</button>
-        <button class="panel__button--divide">/</button>
-        <button class="panel__button--dot">.</button>
-        <button class="panel__button--equal">=</button>
-    
-      </div>
-    </main>
-    <!--  <div class="attribution">
+    </div>
+    <div class="calculadora__screen">
+      <input type="text" id="calculadora__display" placeholder="0" disabled>
+    </div>
+    <div class="calculadora__panel panels">
+      <button class="panel__button--1" onclick="number('1')" onmousedown="mouseDown()">1</button>
+      <button class="panel__button--2" onclick="number('2')">2</button>
+      <button class="panel__button--3" onclick="number('3')">3</button>
+      <button class="panel__button--4" onclick="number('4')">4</button>
+      <button class="panel__button--5" onclick="number('5')">5</button>
+      <button class="panel__button--6" onclick="number('6')">6</button>
+      <button class="panel__button--7" onclick="number('7')">7</button>
+      <button class="panel__button--8" onclick="number('8')">8</button>
+      <button class="panel__button--9" onclick="number('9')">9</button>
+      <button class="panel__button--0" onclick="number('0')">0</button>
+      <button class="panel__button--reset" onclick="clearResult()">reset</button>
+      <button class="panel__button--del" onclick="deleteNumber()">del</button>
+      <button class="panel__button--plus" onclick="number('+')">+</button>
+      <button class="panel__button--rest" onclick="number('-')">-</button>
+      <button class="panel__button--multiply" onclick="number('*')">x</button>
+      <button class="panel__button--divide" onclick="number('/')">/</button>
+      <button class="panel__button--dot" onclick="number('.')">.</button>
+      <button class="panel__button--equal" onclick="result()">=</button>
+    </div>
+  </main>
+  <!--  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-  </body>
+  <script src="js/calculadora.js"></script>
+  <script src="js/switch.js"></script>
+</body>
+
 </html>
